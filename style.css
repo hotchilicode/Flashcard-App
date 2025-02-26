@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+header{
+    background: rgb(27, 96, 37);
+    padding: 1rem;
+}
+
+button{
+    background: rgb(204, 208, 199);
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    padding: 8px;
+}
+
+button:hover{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.container{
+    margin: 0 auto;
+    width: 95%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    background-color: rgb(27, 96, 37);
+}
+
+.nav button{
+    font-family: inherit;
+}
+
+.create-box{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: rgb(27, 96, 37);
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.5);
+    display: none; /* Initially hidden */
+}
+
+.create-box textarea{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    font-family: inherit;
+}
+
+.create-box button{
+    width: fit-content;
+}
+
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.flashcard{
+    width: 370px;
+    height: 200px;
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: lightgrey;
+    box-shadow: 0 2px 4px 0 rgba(255, 255, 255, 0.5);
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+@media(max-width: 768px){
+    .flashcard{
+        margin: auto;
+    }
+
+    .flashcards{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    .create-box{
+        width: 100%;
+    }
+
+    .flashcards{
+        width: 100%;
+    }
+}
